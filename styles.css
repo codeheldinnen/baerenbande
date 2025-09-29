@@ -1,0 +1,154 @@
+/* ===============================
+   Basis-Design
+   =============================== */
+:root {
+  --bg: #fffaf3;
+  --ink: #2b2b2b;
+  --soft: #ffe7c4;
+  --accent: #f1992e; /* Akzentfarbe für Buttons/Badge */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', system-ui, -apple-system, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* ===============================
+   Kopfbereich (Header) + Fußbereich (Footer)
+   =============================== */
+header,
+footer {
+  background: var(--soft);
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+h1 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 2rem;
+}
+.lead {
+  margin: 0.2rem 0 0;
+  color: #414141;
+}
+
+/* ===============================
+   Navigation als „Button“-Links
+   (nur Links, die wie Buttons aussehen)
+   =============================== */
+nav {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* kleine Abstände zwischen Buttons */
+  flex-wrap: wrap; /* umbrechen auf kleinen Bildschirmen */
+}
+
+.nav-btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+  border: 2px solid var(--accent);
+  background: #ffffff;
+  border-radius: 999px; /* Pillenform */
+  padding: 0.45rem 0.9rem;
+}
+.nav-btn:hover {
+  background: #ffe3a3;
+}
+
+/* ===============================
+   Hauptbereich (Main) + Sektionen
+   =============================== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+section {
+  margin: 2rem 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #fff7e6;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Galerie (Grid mit gleich hohen Thumbnails)
+   =============================== */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.grid figure {
+  margin: 0;
+}
+.grid img {
+  width: 100%;
+  height: 160px; /* gleiche Höhe für alle Vorschaubilder */
+  object-fit: cover; /* schönes Zuschneiden statt Verzerren */
+  border-radius: 10px;
+  display: block;
+}
+.grid figcaption {
+  font-size: 0.9rem;
+  color: #575757;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ===============================
+   Buttons (z. B. „Zu den Fun Facts“)
+   =============================== */
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: #fff7e6;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #ffe3a3;
+}
+.btn-row .btn {
+  margin-right: 0.5rem;
+}
+
+/* ===============================
+   Gag-Box (Bärenwitz) – per <details>
+   =============================== */
+details.lol {
+  background: #ffedd2;
+  border: 1px dashed #f0d7b6;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.8rem 0 0.4rem;
+}
+details.lol summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Footer-Text */
+footer p {
+  margin: 0;
+  color: #4d4d4d;
+}
